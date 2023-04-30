@@ -1,0 +1,6 @@
+.env
+.idea/
+poetry.lock
+.DS_Store
+backpack_tf2/__pycache__/
+backpack_tf2/app/__pycache__/
