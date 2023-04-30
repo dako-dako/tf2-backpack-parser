@@ -52,6 +52,7 @@ def main():
     args = parser.parse_args()
     match SubCommand(args.action):
         case SubCommand.listings_to_db:
+            print("START MIGRATING TO DB")
             bp.get_collectors_classifieds(page_size=30)  # Getting all collector weapons
             bp.get_all_quick_switch_classifieds(
                 page_size=30, particle=""
@@ -83,6 +84,7 @@ def main():
             bp.get_unusual_classifieds_by_effect(
                 page_size=30, particle="86"
             )  # Getting all unusuals with Haunted Phantasm Jr
+            print("DB MIGRATION DONE")
 
         case SubCommand.listings_sync:
             # COLLECTOR ITEMS
